@@ -15,14 +15,13 @@ const vue_app = Vue.createApp({
             console.log('---');
             console.log('se busca anime al azar');
             console.log('---');
-            var random_id = Math.round(Math.random()*(49999-1)+1);
-
+            
 
             //  jikanjs.loadAnime(19815, 'episodes').then((response) => {this.animeObject = response} );
             //var random_id = 49999;
 
             do {
-
+                var random_id = Math.round(Math.random()*(49999-1)+1);
                 var api_irl = "https://api.jikan.moe/v3/anime/"+random_id;
                 const res = await fetch(api_irl)
                     .then(response => {
