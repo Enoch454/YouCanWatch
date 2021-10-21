@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="assets/styles.css">
+
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+
+<body id="page-top" onload="init()" >
+    
+    <header class="h-100 masthead" style="background-image:url('assets/img/bg-masthead.png');">
+        
+        <div id="recomendation_card" class="container my-0 text-left round-3" >
+            <div class="round-3 row container-fluid ">
+                <div class="col-9">
+                    <h2>Today you can watch ...</h2>
+                </div>
+                <div class="col-3">
+                    <a class="btn btn-primary btn-lg" role="button" @click = "getRandomAnime()"><span class="simbolo">&#8634;</span></a>
+                </div>
+            </div>
+            <div class="round-3 row container-fluid py-3">
+                <div class="col-4">
+                    <img class="img-fluid" v-bind:src="animeImageURL" alt="img">
+                </div>
+                <div class="col-8">
+                    <h2>{{ animeTitle }}</h2>
+                    <p class="fs-5">{{ animeDescription }}</p>
+                </div>
+            </div>
+            <div class="round-3 row container-fluid py-3">
+                <div class="col-6">
+
+                </div>
+                <div class="col-6">
+                    <a type="button" v-bind:href="linkMoreInfo" class="btn btn-link" target="_blank" >Go to MyAnimeList.net for more info</a>
+                </div>
+            </div>
+        </div>
+
+    
+    </header>
+
+    
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/stylish-portfolio.js"></script>
+
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
